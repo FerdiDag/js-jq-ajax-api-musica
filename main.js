@@ -4,19 +4,24 @@ $(document).ready(function() {
         'method': 'GET',
         success: function(data) {
 
+
             var array_dischi = data.response;
-            console.log(array_dischi);
+            // console.log(array_dischi);
 
             for (var i = 0; i < array_dischi.length; i++) {
                 var disco_corrente = array_dischi[i];
-                console.log(disco_corrente);
+                // console.log(disco_corrente);
 
                 var dati_disco = {
                     'autore': disco_corrente.author,
                     'titolo': disco_corrente.title,
                     'immagine': disco_corrente.poster,
                     'anno': disco_corrente.year,
+                    'genere': disco_corrente.genre,
                 };
+
+
+                console.log(dati_disco)
 
 
                 var template_html = $('#card-disco').html();
@@ -31,12 +36,20 @@ $(document).ready(function() {
 
 
             }
+            $("#generi").change(function() {
+                var genereCorrente = $(this).val().toLowerCase();
+                console.log(genereCorrente)
+
+
+            });
 
         },
         error: function() {
             alert("E' avvenuto un errore.");
         }
 
+
     });
+
 
 });

@@ -21,6 +21,7 @@ header {
     height: 70px;
     background: rgb(46, 58, 70);
 }
+
 header img {
     height: 50px;
     margin-top: 10px;
@@ -65,4 +66,13 @@ header img {
 
 .cd span.year {
     color: grey;
+}
+
+label {
+    color: white;
+    font-size: 25px;
+}
+
+.genre {
+    display: none;
 }
