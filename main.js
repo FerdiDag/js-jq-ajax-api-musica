@@ -36,12 +36,14 @@ $(document).ready(function() {
 
 
             }
-            $("#generi").change(function() {
-                var genereCorrente = $(this).val().toLowerCase();
-                console.log(genereCorrente)
-                console.log(disco_corrente.genre.toLowerCase())
 
+            $("#generi").on("change", function() {
+                var value = $(this).val().toLowerCase();
+                $(".cd ").filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
             });
+
 
         },
         error: function() {
