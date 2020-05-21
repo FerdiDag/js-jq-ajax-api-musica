@@ -21,7 +21,7 @@ $(document).ready(function() {
                 };
 
 
-                console.log(dati_disco)
+
 
 
                 var template_html = $('#card-disco').html();
@@ -39,7 +39,7 @@ $(document).ready(function() {
             $("#generi").change(function() {
                 var genereCorrente = $(this).val().toLowerCase();
                 console.log(genereCorrente)
-
+                console.log(disco_corrente.genre.toLowerCase())
 
             });
 
